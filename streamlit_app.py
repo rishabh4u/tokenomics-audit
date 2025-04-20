@@ -28,63 +28,63 @@ if "step" not in st.session_state:
 
 # --- Step-by-Step Inputs ---
 if st.session_state.step == 1:
-    name = st.text_input("Enter Project Name")
+    name = st.text_input("What's the Token Name")
     if st.button("Next") and name:
         st.session_state.project_name = name
         st.session_state.step += 1
         st.rerun()
 
 elif st.session_state.step == 2:
-    supply = st.number_input("Total Token Supply", min_value=1, value=1_000_000_000)
+    supply = st.number_input("What is Total Token Supply", min_value=1, value=1_000_000_000)
     if st.button("Next"):
         st.session_state.total_supply = supply
         st.session_state.step += 1
         st.rerun()
 
 elif st.session_state.step == 3:
-    price = st.number_input("Token Price at TGE (USD)", min_value=0.00001, value=0.05, step=0.01, format="%.5f")
+    price = st.number_input("What is the Token Price at TGE (in USD)", min_value=0.00001, value=0.05, step=0.01, format="%.5f")
     if st.button("Next"):
         st.session_state.price = price
         st.session_state.step += 1
         st.rerun()
 
 elif st.session_state.step == 4:
-    liq = st.number_input("Liquidity Fund (USD)", min_value=0.0, value=500000.0, step=10000.0)
+    liq = st.number_input("How much Liquidity Fund (USD)is being allocated", min_value=0.0, value=500000.0, step=10000.0)
     if st.button("Next"):
         st.session_state.liq = liq
         st.session_state.step += 1
         st.rerun()
 
 elif st.session_state.step == 5:
-    category = st.selectbox("Select Project Category", ["Gaming", "DeFi", "NFT", "Infrastructure"])
+    category = st.selectbox("Select the company category", ["Gaming", "DeFi", "NFT", "Infrastructure"])
     if st.button("Next"):
         st.session_state.ptype = category
         st.session_state.step += 1
         st.rerun()
 
 elif st.session_state.step == 6:
-    ubase = st.number_input("Current User Base", min_value=0, value=10000)
+    ubase = st.number_input("What is the Current User Base", min_value=0, value=10000)
     if st.button("Next"):
         st.session_state.ubase = ubase
         st.session_state.step += 1
         st.rerun()
 
 elif st.session_state.step == 7:
-    growth = st.number_input("Monthly User Growth Rate (%)", min_value=0.0, value=10.0)
+    growth = st.number_input("What is the Monthly User Growth Rate (%)", min_value=0.0, value=10.0)
     if st.button("Next"):
         st.session_state.ugrow = growth / 100
         st.session_state.step += 1
         st.rerun()
 
 elif st.session_state.step == 8:
-    burn = st.number_input("Monthly Incentive Spend (USD)", min_value=0.0, value=50000.0)
+    burn = st.number_input("What is the Monthly Burn Rate (USD)", min_value=0.0, value=50000.0)
     if st.button("Next"):
         st.session_state.mburn = burn
         st.session_state.step += 1
         st.rerun()
 
 elif st.session_state.step == 9:
-    rev = st.number_input("Annual Revenue (USD)", min_value=0.0, value=1_000_000.0, step=10000.0)
+    rev = st.number_input("What is the current ARR (USD)", min_value=0.0, value=1_000_000.0, step=10000.0)
     if st.button("Next"):
         st.session_state.rev = rev
         st.session_state.step += 1
@@ -336,7 +336,7 @@ if st.session_state.step == "done":
     ax3.hist(monte, bins=min(20, len(set(monte))), color='skyblue', edgecolor='black')
     ax3.axvline(monte_median, color='green', linestyle='--', label=f'Median: {monte_median}x')
     ax3.set_title("Monte Carlo – Survivability Distribution")
-    ax3.set_xlabel("Resilience Score (Buy Pressure ÷ Token Release Value)")
+    ax3.set_xlabel("Resilience Score")
     ax3.set_ylabel("Number of Simulations")
     ax3.legend()
     st.pyplot(fig_mc)
@@ -401,7 +401,7 @@ Tokenomics Metrics:
 - Risk Rating: {risk}  
 
 🎯 Report Instructions:  
-1. Start with a paragraph on the growth of tokenised markets with statistics.
+1. Start with a paragraph on the growth of tokenised markets with statistics in terms of growth rate and number of tokens launched every year since 2015
 2. Talk about the importance of tokenomics and aligning emissions with business logic.
 3. For each metric:
    - Explain what it means and why it matters.
@@ -409,7 +409,8 @@ Tokenomics Metrics:
    - Use clean bold headings, no markdown characters.
    - Add input values as tables under each heading.
    - Include inflation and shock charts where applicable.
-4. Finish with 'Token Design by TDeFi' paragraph.
+4. Finish with 'Token Design by TDeFi' paragraph where the following has to be copied as it is 
+Token engineering is not about distribution schedules or supply caps alone - it is the structured discipline of aligning incentives, behavior, and long-term value creation. At its core, it is the science of designing economic systems where every stakeholder, from early investors to late-stage contributors, is guided by aligned motivations. A well-engineered token system creates harmony between product usage, network growth, and token demand. Poor token design, on the other hand, often leads to value leakage, unsustainable emissions, and ultimately, failure of both the product and its economy. At TDeFi, we don’t treat tokenomics as an afterthought. We build token models that function as economic engines - driven by utility, governed by logic, and sustained by real-world adoption.
 """
 
         response = client.chat.completions.create(
