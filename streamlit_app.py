@@ -409,6 +409,50 @@ Tokenomics Metrics:
    - Use clean bold headings, no markdown characters.
    - Add input values as tables under each heading.
    - Include inflation and shock charts where applicable.
+   📘 Format:
+Year-on-Year Inflation  
+→ [Explain why this metric matters]  
+→ [Interpret each year’s number and flag if Year 1 > 300%, Year 2 > 80%, Year 3 > 30%, Year 4 > 10%, Year 5 > 5%]  
+→ [Discuss what this means for token value & dilution dynamics]
+
+Shock Stopper  
+→ [Explain monthly release volatility]  
+→ [Classify number of shock months in 0–5%, 5–10%, 10–15%, 15%+]  
+→ [Comment on sell pressure, liquidity needs]
+
+Governance HHI  
+→ [Explain the concentration index and thresholds]  
+→ [Classify as decentralized (<0.15), moderate (0.15–0.25), or concentrated (>0.25)]  
+→ [Implications on price control, governance risks]
+
+Liquidity Shield  
+→ [What this ratio tells about TGE protection]  
+→ [Flag risk if <1.0, else explain confidence in launch price support]
+
+Lockup Ratio  
+→ [Why longer cliffs matter for supply management]  
+→ [Interpret % of pools with cliff ≥ 12 months]
+
+VC Dominance  
+→ [Importance of VC control on supply]  
+→ [Highlight risk of early exits or control if % is high]
+
+Community Index  
+→ [Significance of community-driven allocations]  
+→ [Strength if above 30%]
+
+Emission Taper  
+→ [Why tapering emissions supports long-term price stability]  
+→ [Ideal taper ratio between 1.5–3x; flag risks if not achieved]
+
+Monte Carlo Survivability  
+→ [What survivability score represents]  
+→ [Explain what median score means for resilience of token in first 12 months]
+
+Conclusion Summary  
+→ [Summarize red flags]  
+→ [Summarize structural strengths]  
+→ [Judgment on long-term token performance]
 4. Finish with 'Token Design by TDeFi' paragraph where the following has to be copied as it is 
 Token engineering is not about distribution schedules or supply caps alone - it is the structured discipline of aligning incentives, behavior, and long-term value creation. At its core, it is the science of designing economic systems where every stakeholder, from early investors to late-stage contributors, is guided by aligned motivations. A well-engineered token system creates harmony between product usage, network growth, and token demand. Poor token design, on the other hand, often leads to value leakage, unsustainable emissions, and ultimately, failure of both the product and its economy. At TDeFi, we don’t treat tokenomics as an afterthought. We build token models that function as economic engines - driven by utility, governed by logic, and sustained by real-world adoption.
 """
