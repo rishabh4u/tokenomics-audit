@@ -13,7 +13,7 @@ from io import BytesIO
 
 # --- Branding & Config ---
 st.set_page_config(page_title="Tokenomics Audit AI", layout="wide")
-st.image("https://tde.fi/assets/logo-dark.svg", width=200)
+st.image("logo.png", width=200)
 st.markdown("""
     <style>
     .stApp { background-color: #F7F8FA; }
