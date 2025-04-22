@@ -20,8 +20,11 @@ st.markdown("""
     .title { font-size: 32px; font-weight: bold; color: #001f3f; margin-bottom: 10px; }
     </style>
 """, unsafe_allow_html=True)
-st.markdown("<div class='title'>Tokenomics Audit AI Dashboard By TDeFi</div>", unsafe_allow_html=True)
+st.markdown("<div class='title'>Tokenomics Audit AI Agent By TDeFi - For Founders and Investors</div>", unsafe_allow_html=True)
 
+st.markdown("""<div style='font-size:16px; margin-bottom:20px; color:#333'>
+This is a fully editable agent where you can fill in your numbers and check the results. The default numbers are just for examples and can be changed to match your token's parameters.
+</div>""", unsafe_allow_html=True)
 # --- Step Tracker ---
 if "step" not in st.session_state:
     st.session_state.step = 1
@@ -92,7 +95,7 @@ elif st.session_state.step == 9:
 
 # --- Token Pool Setup ---
 elif st.session_state.step == 10:
-    st.markdown("### 🎯 Token Allocation & Pool Structure")
+    st.markdown("### 🎯 Token Allocation & Pool Structure(You can edit the number of pools and also the values)")
     num_pools = st.number_input("How many token pools would you like to define?", 1, 30, 9)
 
     default_pools = [
